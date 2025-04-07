@@ -1,0 +1,17 @@
+# Node.js dependencies
+node_modules/
+
+# 환경 변수 파일 (절대 공유 금지)
+.env
+
+# 이미지나 업로드 파일
+public/images/
+
+# 로그 파일
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 운영 체제별 파일
+.DS_Store
+Thumbs.db
