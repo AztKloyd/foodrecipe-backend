@@ -10,7 +10,10 @@ connectDb();
 
 // 미들웨어
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://foodrecipe-frontend-ten.vercel.app", // 또는 "*"
+  credentials: true
+}));
 app.use(express.static("public"));
 
 // 정적 파일 경로: frontend/recipe-app/dist
