@@ -11,7 +11,7 @@ connectDb();
 // 미들웨어
 app.use(express.json());
 app.use(cors({
-  origin: "https://foodrecipe-frontend-ten.vercel.app", // 또는 "*"
+  origin: "*", 
   credentials: true
 }));
 app.use(express.static("public"));
