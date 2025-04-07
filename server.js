@@ -16,17 +16,9 @@ app.use(cors({
 }));
 app.use(express.static("public"));
 
-// 정적 파일 경로: frontend/recipe-app/dist
-app.use(express.static(path.join(__dirname, "../frontend/recipe-app/dist")));
-
 // 라우터
 app.use("/recipe", require("./routes/recipe"));
 app.use("/", require("./routes/user"));
-
-// SPA fallback: React Router 지원 (모든 경로에 대해 index.html 반환)
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/recipe-app/dist", "index.html"));
-  });
 
 
 // 포트 설정 및 서버 실행
