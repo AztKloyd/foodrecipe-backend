@@ -4,7 +4,13 @@ const dotenv = require("dotenv").config();
 const connectDb = require("./config/connectionDb");
 const cors = require("cors");
 const path = require("path");
+const fs = require("fs");
 
+//서버 실행시 폴더 없으면 자동으로 생성
+const imageDir = path.join(__dirname, "./public/images");
+if (!fs.existsSync(imageDir)) {
+  fs.mkdirSync(imageDir, { recursive: true });
+}
 // DB 연결
 connectDb();
 
