@@ -17,8 +17,8 @@ app.use(cors({
 app.use(express.static("public"));
 
 // 라우터
-app.use("/recipe", require("./routes/recipe"));
 app.use("/", require("./routes/user"));
+app.use("/recipe", require("./routes/recipe"));
 
 
 // 포트 설정 및 서버 실행
