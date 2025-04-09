@@ -24,7 +24,7 @@ const getRecipe=async(req,res)=>{
 }
 
 const addRecipe = async (req, res) => {
-    try {
+    try {console.log("req.user:", req.user)
       const { title, ingredients, instructions, time } = req.body;
   
       if (!title || !ingredients || !instructions) {
